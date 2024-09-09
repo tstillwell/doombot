@@ -5,7 +5,10 @@ Two different AI approaches to playing DOOM.
 One is basded on opencv and uses computer vision and hardcoded heuristics / rules.
 
 The other is based on pytorch and uses machine learning (RNN) and is a modified version of the Arnold project
-(see https://github.com/glample/Arnold/ for original source code).
+(see https://github.com/glample/Arnold/ for original source code). 
+
+The code in the `arnoldFixed/arnold` subdirectory belongs to the original authors.
+I only wrote some fixes and minor changes to update the code to suit this evaluation.
 
 Agents are evaluated in zombie_deathmatch benchmark map which is 24 spanwed zombies.
 Zombie_Deathmatch map is a modified version from the vizdoom examples, with mobs removed and custom ACS scripting
