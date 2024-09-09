@@ -1,0 +1,708 @@
+INFO [838663] - 09/08/24 22:29:55 - 0:00:00 - ========== Running DOOM ==========
+INFO [838663] - 09/08/24 22:29:55 - 0:00:00 - Experiment will be saved in: /home/tstillwell/projects/arnoldFixed/Arnold/dumped/test/a188qbm1mu
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - scenario: self_play
+                                              map_ids_train: [1]
+                                              map_ids_test: [1]
+                                              freedoom: True
+                                              height: 60
+                                              width: 108
+                                              gray: False
+                                              use_screen_buffer: True
+                                              use_depth_buffer: False
+                                              labels_mapping: 
+                                              game_features: target,enemy
+                                              render_hud: False
+                                              render_crosshair: True
+                                              render_weapon: True
+                                              hist_size: 4
+                                              frame_skip: 3
+                                              action_combinations: attack+move_lr;turn_lr;move_fb
+                                              freelook: False
+                                              speed: on
+                                              crouch: off
+                                              manual_control: True
+                                              players_per_game: 1
+                                              player_rank: 0
+                                              dump_path: /home/tstillwell/projects/arnoldFixed/Arnold/dumped/test/a188qbm1mu
+                                              visualize: True
+                                              evaluate: 1
+                                              human_player: False
+                                              reload: /home/tstillwell/projects/arnoldFixed/Arnold/dumped/default/demobot/best-680000.pth
+                                              dump_freq: 0
+                                              gpu_id: -1
+                                              log_frequency: 100
+                                              network_type: dqn_rnn
+                                              use_bn: False
+                                              batch_size: 32
+                                              replay_memory_size: 1000000
+                                              start_decay: 0
+                                              stop_decay: 1000000
+                                              final_decay: 0.1
+                                              gamma: 0.99
+                                              dueling_network: False
+                                              recurrence: lstm
+                                              n_rec_updates: 1
+                                              n_rec_layers: 1
+                                              remember: True
+                                              clip_delta: 1.0
+                                              variable_dim: [32, 32]
+                                              bucket_size: [10, 1]
+                                              hidden_dim: 512
+                                              update_frequency: 4
+                                              dropout: 0.5
+                                              optimizer: rmsprop,lr=0.0002
+                                              wad: zombie_deathmatch
+                                              n_bots: 2
+                                              reward_values: 
+                                              randomize_textures: False
+                                              init_bots_health: 100
+                                              game_variables: [('health', 101), ('sel_ammo', 301)]
+                                              n_variables: 2
+                                              n_features: 2
+                                              n_fm: 3
+                                              use_continuous: False
+                                              episode_time: None
+                                              eval_freq: 20000
+                                              eval_time: 900
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - 9 available buttons: ['MOVE_FORWARD', 'MOVE_BACKWARD', 'TURN_LEFT', 'TURN_RIGHT', 'MOVE_LEFT', 'MOVE_RIGHT', 'ATTACK', 'SPEED', 'CROUCH']
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - 35 available actions:
+                                              ['MOVE_FORWARD']
+                                              ['MOVE_BACKWARD']
+                                              ['TURN_LEFT']
+                                              ['TURN_LEFT', 'MOVE_FORWARD']
+                                              ['TURN_LEFT', 'MOVE_BACKWARD']
+                                              ['TURN_RIGHT']
+                                              ['TURN_RIGHT', 'MOVE_FORWARD']
+                                              ['TURN_RIGHT', 'MOVE_BACKWARD']
+                                              ['ATTACK']
+                                              ['ATTACK', 'MOVE_FORWARD']
+                                              ['ATTACK', 'MOVE_BACKWARD']
+                                              ['ATTACK', 'TURN_LEFT']
+                                              ['ATTACK', 'TURN_LEFT', 'MOVE_FORWARD']
+                                              ['ATTACK', 'TURN_LEFT', 'MOVE_BACKWARD']
+                                              ['ATTACK', 'TURN_RIGHT']
+                                              ['ATTACK', 'TURN_RIGHT', 'MOVE_FORWARD']
+                                              ['ATTACK', 'TURN_RIGHT', 'MOVE_BACKWARD']
+                                              ['MOVE_LEFT']
+                                              ['MOVE_LEFT', 'MOVE_FORWARD']
+                                              ['MOVE_LEFT', 'MOVE_BACKWARD']
+                                              ['MOVE_LEFT', 'TURN_LEFT']
+                                              ['MOVE_LEFT', 'TURN_LEFT', 'MOVE_FORWARD']
+                                              ['MOVE_LEFT', 'TURN_LEFT', 'MOVE_BACKWARD']
+                                              ['MOVE_LEFT', 'TURN_RIGHT']
+                                              ['MOVE_LEFT', 'TURN_RIGHT', 'MOVE_FORWARD']
+                                              ['MOVE_LEFT', 'TURN_RIGHT', 'MOVE_BACKWARD']
+                                              ['MOVE_RIGHT']
+                                              ['MOVE_RIGHT', 'MOVE_FORWARD']
+                                              ['MOVE_RIGHT', 'MOVE_BACKWARD']
+                                              ['MOVE_RIGHT', 'TURN_LEFT']
+                                              ['MOVE_RIGHT', 'TURN_LEFT', 'MOVE_FORWARD']
+                                              ['MOVE_RIGHT', 'TURN_LEFT', 'MOVE_BACKWARD']
+                                              ['MOVE_RIGHT', 'TURN_RIGHT']
+                                              ['MOVE_RIGHT', 'TURN_RIGHT', 'MOVE_FORWARD']
+                                              ['MOVE_RIGHT', 'TURN_RIGHT', 'MOVE_BACKWARD']
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - Reward values:
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - {'BASE_REWARD': 0.0, 'DISTANCE': 0.0, 'KILL': 5.0, 'DEATH': -5.0, 'SUICIDE': -5.0, 'MEDIKIT': 1.0, 'ARMOR': 1.0, 'INJURED': -1.0, 'WEAPON': 1.0, 'AMMO': 1.0, 'USE_AMMO': -0.2}
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - Input shape: (3, 60, 108)
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - Conv layer output dim : 4608
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - Hidden layer input dim: 4672
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - Reloading model from /home/tstillwell/projects/arnoldFixed/Arnold/dumped/default/demobot/best-680000.pth...
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - Evaluating the model...
+INFO [838685] - 09/08/24 22:29:55 - 0:00:00 - Evaluating on map 1 ...
+INFO [838685] - 09/08/24 22:29:57 - 0:00:02 - Lost ammo: bullets (50 -> 49)
+INFO [838685] - 09/08/24 22:29:57 - 0:00:02 - Lost ammo: bullets (49 -> 48)
+INFO [838685] - 09/08/24 22:29:58 - 0:00:03 - Lost ammo: bullets (48 -> 47)
+INFO [838685] - 09/08/24 22:29:59 - 0:00:04 - Lost ammo: bullets (47 -> 46)
+INFO [838685] - 09/08/24 22:29:59 - 0:00:04 - Lost ammo: bullets (46 -> 45)
+INFO [838685] - 09/08/24 22:30:00 - 0:00:04 - Lost ammo: bullets (45 -> 44)
+INFO [838685] - 09/08/24 22:30:00 - 0:00:05 - Lost ammo: bullets (44 -> 43)
+INFO [838685] - 09/08/24 22:30:00 - 0:00:05 - Lost ammo: bullets (43 -> 42)
+WARNING [838685] - 09/08/24 22:30:01 - 0:00:06 - Activated manual control
+INFO [838685] - 09/08/24 22:30:01 - 0:00:06 - Lost ammo: bullets (42 -> 41)
+INFO [838685] - 09/08/24 22:30:01 - 0:00:06 - Found ammo: shells (0 -> 50)
+INFO [838685] - 09/08/24 22:30:02 - 0:00:07 - Lost ammo: bullets (41 -> 40)
+INFO [838685] - 09/08/24 22:30:02 - 0:00:07 - Lost ammo: bullets (40 -> 39)
+INFO [838685] - 09/08/24 22:30:02 - 0:00:07 - Lost health (100 -> 97)
+INFO [838685] - 09/08/24 22:30:02 - 0:00:07 - Lost ammo: bullets (39 -> 38)
+INFO [838685] - 09/08/24 22:30:03 - 0:00:07 - Kill
+INFO [838685] - 09/08/24 22:30:03 - 0:00:07 - Lost ammo: bullets (38 -> 37)
+INFO [838685] - 09/08/24 22:30:03 - 0:00:08 - Lost ammo: bullets (37 -> 36)
+INFO [838685] - 09/08/24 22:30:03 - 0:00:08 - Kill
+INFO [838685] - 09/08/24 22:30:03 - 0:00:08 - Lost ammo: bullets (36 -> 35)
+INFO [838685] - 09/08/24 22:30:03 - 0:00:08 - Lost ammo: bullets (35 -> 34)
+INFO [838685] - 09/08/24 22:30:04 - 0:00:09 - Lost ammo: bullets (34 -> 33)
+INFO [838685] - 09/08/24 22:30:04 - 0:00:09 - Lost ammo: bullets (33 -> 32)
+INFO [838685] - 09/08/24 22:30:04 - 0:00:09 - Lost health (97 -> 85)
+INFO [838685] - 09/08/24 22:30:04 - 0:00:09 - Lost ammo: bullets (32 -> 31)
+INFO [838685] - 09/08/24 22:30:04 - 0:00:09 - Lost ammo: bullets (31 -> 30)
+INFO [838685] - 09/08/24 22:30:05 - 0:00:10 - Kill
+INFO [838685] - 09/08/24 22:30:05 - 0:00:10 - Lost ammo: bullets (30 -> 29)
+INFO [838685] - 09/08/24 22:30:05 - 0:00:10 - Kill
+INFO [838685] - 09/08/24 22:30:05 - 0:00:10 - Found ammo: bullets (29 -> 34)
+INFO [838685] - 09/08/24 22:30:05 - 0:00:10 - Kill
+INFO [838685] - 09/08/24 22:30:05 - 0:00:10 - Lost ammo: bullets (34 -> 33)
+INFO [838685] - 09/08/24 22:30:05 - 0:00:10 - Kill
+INFO [838685] - 09/08/24 22:30:05 - 0:00:10 - Lost ammo: bullets (33 -> 32)
+INFO [838685] - 09/08/24 22:30:06 - 0:00:10 - Found ammo: bullets (32 -> 37)
+INFO [838685] - 09/08/24 22:30:06 - 0:00:11 - Found ammo: bullets (37 -> 41)
+INFO [838685] - 09/08/24 22:30:06 - 0:00:11 - Lost health (85 -> 64)
+INFO [838685] - 09/08/24 22:30:06 - 0:00:11 - Lost ammo: bullets (41 -> 40)
+WARNING [838685] - 09/08/24 22:30:06 - 0:00:11 - Activated manual control
+INFO [838685] - 09/08/24 22:30:07 - 0:00:11 - Kill
+INFO [838685] - 09/08/24 22:30:07 - 0:00:11 - Kill
+INFO [838685] - 09/08/24 22:30:07 - 0:00:11 - Lost health (64 -> 55)
+INFO [838685] - 09/08/24 22:30:07 - 0:00:12 - Lost ammo: bullets (40 -> 39)
+INFO [838685] - 09/08/24 22:30:07 - 0:00:12 - Kill
+INFO [838685] - 09/08/24 22:30:07 - 0:00:12 - Lost health (55 -> 40)
+INFO [838685] - 09/08/24 22:30:07 - 0:00:12 - Lost ammo: bullets (39 -> 38)
+INFO [838685] - 09/08/24 22:30:07 - 0:00:12 - Kill
+INFO [838685] - 09/08/24 22:30:08 - 0:00:13 - Kill
+INFO [838685] - 09/08/24 22:30:08 - 0:00:13 - Lost health (40 -> 31)
+INFO [838685] - 09/08/24 22:30:08 - 0:00:13 - Lost ammo: bullets (38 -> 37)
+INFO [838685] - 09/08/24 22:30:08 - 0:00:13 - Lost ammo: bullets (37 -> 36)
+INFO [838685] - 09/08/24 22:30:09 - 0:00:14 - Lost ammo: bullets (36 -> 35)
+INFO [838685] - 09/08/24 22:30:09 - 0:00:14 - Kill
+INFO [838685] - 09/08/24 22:30:09 - 0:00:14 - Lost ammo: bullets (35 -> 34)
+WARNING [838685] - 09/08/24 22:30:09 - 0:00:14 - Activated manual control
+INFO [838685] - 09/08/24 22:30:10 - 0:00:14 - Lost ammo: bullets (34 -> 33)
+INFO [838685] - 09/08/24 22:30:10 - 0:00:15 - Lost ammo: bullets (33 -> 32)
+INFO [838685] - 09/08/24 22:30:10 - 0:00:15 - Kill
+INFO [838685] - 09/08/24 22:30:10 - 0:00:15 - Lost ammo: bullets (32 -> 31)
+INFO [838685] - 09/08/24 22:30:10 - 0:00:15 - Lost ammo: bullets (31 -> 30)
+INFO [838685] - 09/08/24 22:30:11 - 0:00:16 - Kill
+INFO [838685] - 09/08/24 22:30:11 - 0:00:16 - Lost ammo: bullets (30 -> 29)
+INFO [838685] - 09/08/24 22:30:12 - 0:00:16 - Kill
+INFO [838685] - 09/08/24 22:30:12 - 0:00:17 - Kill
+INFO [838685] - 09/08/24 22:30:12 - 0:00:17 - Lost ammo: bullets (29 -> 28)
+INFO [838685] - 09/08/24 22:30:12 - 0:00:17 - Lost ammo: bullets (28 -> 27)
+INFO [838685] - 09/08/24 22:30:13 - 0:00:18 - Lost ammo: bullets (27 -> 26)
+INFO [838685] - 09/08/24 22:30:13 - 0:00:18 - Lost health (31 -> 25)
+INFO [838685] - 09/08/24 22:30:13 - 0:00:18 - Kill
+INFO [838685] - 09/08/24 22:30:14 - 0:00:19 - Lost ammo: bullets (26 -> 25)
+INFO [838685] - 09/08/24 22:30:14 - 0:00:19 - Lost ammo: bullets (25 -> 24)
+INFO [838685] - 09/08/24 22:30:15 - 0:00:20 - Lost ammo: bullets (24 -> 23)
+INFO [838685] - 09/08/24 22:30:15 - 0:00:20 - Lost ammo: bullets (23 -> 22)
+WARNING [838685] - 09/08/24 22:30:16 - 0:00:21 - Activated manual control
+INFO [838685] - 09/08/24 22:30:17 - 0:00:21 - Lost ammo: bullets (22 -> 21)
+INFO [838685] - 09/08/24 22:30:17 - 0:00:22 - Lost ammo: bullets (21 -> 20)
+INFO [838685] - 09/08/24 22:30:17 - 0:00:22 - Lost ammo: bullets (20 -> 19)
+INFO [838685] - 09/08/24 22:30:18 - 0:00:22 - Lost ammo: bullets (19 -> 18)
+INFO [838685] - 09/08/24 22:30:18 - 0:00:23 - Lost ammo: bullets (18 -> 17)
+INFO [838685] - 09/08/24 22:30:18 - 0:00:23 - Lost ammo: bullets (17 -> 16)
+INFO [838685] - 09/08/24 22:30:18 - 0:00:23 - Lost ammo: bullets (16 -> 15)
+INFO [838685] - 09/08/24 22:30:18 - 0:00:23 - Kill
+INFO [838685] - 09/08/24 22:30:19 - 0:00:24 - Lost ammo: bullets (15 -> 14)
+INFO [838685] - 09/08/24 22:30:19 - 0:00:24 - Lost ammo: bullets (14 -> 13)
+INFO [838685] - 09/08/24 22:30:19 - 0:00:24 - Lost ammo: bullets (13 -> 12)
+INFO [838685] - 09/08/24 22:30:20 - 0:00:24 - Lost ammo: bullets (12 -> 11)
+INFO [838685] - 09/08/24 22:30:20 - 0:00:25 - Lost ammo: bullets (11 -> 10)
+INFO [838685] - 09/08/24 22:30:21 - 0:00:25 - Lost ammo: bullets (10 -> 9)
+INFO [838685] - 09/08/24 22:30:21 - 0:00:26 - Lost ammo: bullets (9 -> 8)
+INFO [838685] - 09/08/24 22:30:22 - 0:00:26 - Found ammo: cells (0 -> 100)
+INFO [838685] - 09/08/24 22:30:22 - 0:00:26 - Found ammo: cells (100 -> 200)
+INFO [838685] - 09/08/24 22:30:22 - 0:00:27 - Found ammo: cells (200 -> 300)
+INFO [838685] - 09/08/24 22:30:22 - 0:00:27 - Lost ammo: bullets (8 -> 7)
+INFO [838685] - 09/08/24 22:30:22 - 0:00:27 - Lost ammo: bullets (7 -> 6)
+INFO [838685] - 09/08/24 22:30:23 - 0:00:28 - Lost health (25 -> 10)
+INFO [838685] - 09/08/24 22:30:23 - 0:00:28 - Lost ammo: bullets (6 -> 5)
+INFO [838685] - 09/08/24 22:30:24 - 0:00:29 - Lost ammo: bullets (5 -> 4)
+INFO [838685] - 09/08/24 22:30:24 - 0:00:29 - Kill
+INFO [838685] - 09/08/24 22:30:24 - 0:00:29 - Lost ammo: bullets (4 -> 3)
+INFO [838685] - 09/08/24 22:30:24 - 0:00:29 - Kill
+INFO [838685] - 09/08/24 22:30:24 - 0:00:29 - Lost ammo: bullets (3 -> 2)
+INFO [838685] - 09/08/24 22:30:25 - 0:00:29 - Lost ammo: bullets (2 -> 1)
+INFO [838685] - 09/08/24 22:30:25 - 0:00:30 - Kill
+INFO [838685] - 09/08/24 22:30:25 - 0:00:30 - Lost ammo: bullets (1 -> 0)
+INFO [838685] - 09/08/24 22:30:25 - 0:00:30 - Switched weapon: Pistol -> Fist
+WARNING [838685] - 09/08/24 22:30:26 - 0:00:30 - Activated manual control
+INFO [838685] - 09/08/24 22:30:26 - 0:00:31 - Dead
+INFO [838685] - 09/08/24 22:30:26 - 0:00:31 - Lost health (10 -> -5)
+INFO [838685] - 09/08/24 22:30:26 - 0:00:31 - Respawn player
+WARNING [838685] - 09/08/24 22:30:28 - 0:00:32 - Activated manual control
+INFO [838685] - 09/08/24 22:30:28 - 0:00:33 - Found ammo: rockets (0 -> 5)
+WARNING [838685] - 09/08/24 22:30:29 - 0:00:34 - Activated manual control
+INFO [838685] - 09/08/24 22:30:29 - 0:00:34 - Switched weapon: Fist -> Pistol
+INFO [838685] - 09/08/24 22:30:29 - 0:00:34 - Found ammo: bullets (0 -> 5)
+INFO [838685] - 09/08/24 22:30:30 - 0:00:34 - Found weapon: Pistol
+INFO [838685] - 09/08/24 22:30:30 - 0:00:34 - Found ammo: bullets (5 -> 9)
+INFO [838685] - 09/08/24 22:30:30 - 0:00:35 - Found ammo: bullets (9 -> 14)
+INFO [838685] - 09/08/24 22:30:30 - 0:00:35 - Switched weapon: Pistol -> SuperShotgun
+INFO [838685] - 09/08/24 22:30:32 - 0:00:36 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:30:32 - 0:00:37 - Found ammo: shells (48 -> 50)
+WARNING [838685] - 09/08/24 22:30:32 - 0:00:37 - Activated manual control
+INFO [838685] - 09/08/24 22:30:33 - 0:00:38 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:30:34 - 0:00:39 - Lost ammo: shells (48 -> 46)
+INFO [838685] - 09/08/24 22:30:35 - 0:00:39 - Found ammo: shells (46 -> 50)
+INFO [838685] - 09/08/24 22:30:35 - 0:00:40 - Lost ammo: shells (50 -> 48)
+WARNING [838685] - 09/08/24 22:30:36 - 0:00:41 - Activated manual control
+INFO [838685] - 09/08/24 22:30:36 - 0:00:41 - Lost ammo: shells (48 -> 46)
+INFO [838685] - 09/08/24 22:30:36 - 0:00:41 - Lost ammo: shells (46 -> 44)
+INFO [838685] - 09/08/24 22:30:37 - 0:00:41 - Found ammo: shells (44 -> 50)
+INFO [838685] - 09/08/24 22:30:37 - 0:00:42 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:30:38 - 0:00:43 - Lost ammo: shells (48 -> 46)
+INFO [838685] - 09/08/24 22:30:39 - 0:00:44 - Lost ammo: shells (46 -> 44)
+INFO [838685] - 09/08/24 22:30:40 - 0:00:45 - Lost ammo: shells (44 -> 42)
+INFO [838685] - 09/08/24 22:30:41 - 0:00:46 - Lost ammo: shells (42 -> 40)
+INFO [838685] - 09/08/24 22:30:42 - 0:00:47 - Lost ammo: shells (40 -> 38)
+INFO [838685] - 09/08/24 22:30:43 - 0:00:48 - Lost ammo: shells (38 -> 36)
+INFO [838685] - 09/08/24 22:30:44 - 0:00:49 - Found ammo: shells (36 -> 50)
+INFO [838685] - 09/08/24 22:30:44 - 0:00:49 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:30:45 - 0:00:50 - Kill
+INFO [838685] - 09/08/24 22:30:45 - 0:00:50 - Lost ammo: shells (48 -> 46)
+INFO [838685] - 09/08/24 22:30:46 - 0:00:51 - Lost ammo: shells (46 -> 44)
+INFO [838685] - 09/08/24 22:30:47 - 0:00:52 - Lost ammo: shells (44 -> 42)
+INFO [838685] - 09/08/24 22:30:48 - 0:00:53 - Lost ammo: shells (42 -> 40)
+WARNING [838685] - 09/08/24 22:30:49 - 0:00:54 - Activated manual control
+INFO [838685] - 09/08/24 22:30:49 - 0:00:54 - Lost ammo: shells (40 -> 38)
+INFO [838685] - 09/08/24 22:30:51 - 0:00:55 - Lost ammo: shells (38 -> 36)
+INFO [838685] - 09/08/24 22:30:52 - 0:00:56 - Lost ammo: shells (36 -> 34)
+WARNING [838685] - 09/08/24 22:30:52 - 0:00:57 - Activated manual control
+INFO [838685] - 09/08/24 22:30:53 - 0:00:57 - Lost ammo: shells (34 -> 32)
+INFO [838685] - 09/08/24 22:30:54 - 0:00:59 - Lost ammo: shells (32 -> 30)
+INFO [838685] - 09/08/24 22:30:55 - 0:00:59 - Lost ammo: shells (30 -> 28)
+INFO [838685] - 09/08/24 22:30:56 - 0:01:00 - Lost ammo: shells (28 -> 26)
+INFO [838685] - 09/08/24 22:30:57 - 0:01:01 - Lost ammo: shells (26 -> 24)
+INFO [838685] - 09/08/24 22:30:57 - 0:01:02 - Lost ammo: shells (24 -> 22)
+INFO [838685] - 09/08/24 22:30:58 - 0:01:03 - Lost ammo: shells (22 -> 20)
+INFO [838685] - 09/08/24 22:30:59 - 0:01:04 - Lost ammo: shells (20 -> 18)
+INFO [838685] - 09/08/24 22:31:00 - 0:01:05 - Lost ammo: shells (18 -> 16)
+WARNING [838685] - 09/08/24 22:31:01 - 0:01:06 - Activated manual control
+INFO [838685] - 09/08/24 22:31:01 - 0:01:06 - Lost ammo: shells (16 -> 14)
+INFO [838685] - 09/08/24 22:31:02 - 0:01:07 - Lost ammo: shells (14 -> 12)
+INFO [838685] - 09/08/24 22:31:03 - 0:01:08 - Lost ammo: shells (12 -> 10)
+INFO [838685] - 09/08/24 22:31:04 - 0:01:09 - Lost ammo: shells (10 -> 8)
+INFO [838685] - 09/08/24 22:31:05 - 0:01:10 - Lost ammo: shells (8 -> 6)
+INFO [838685] - 09/08/24 22:31:06 - 0:01:11 - Lost ammo: shells (6 -> 4)
+INFO [838685] - 09/08/24 22:31:07 - 0:01:12 - Lost ammo: shells (4 -> 2)
+WARNING [838685] - 09/08/24 22:31:08 - 0:01:13 - Activated manual control
+INFO [838685] - 09/08/24 22:31:08 - 0:01:13 - Found ammo: bullets (14 -> 24)
+INFO [838685] - 09/08/24 22:31:08 - 0:01:13 - Found ammo: shells (2 -> 42)
+INFO [838685] - 09/08/24 22:31:08 - 0:01:13 - Lost ammo: shells (42 -> 40)
+INFO [838685] - 09/08/24 22:31:09 - 0:01:14 - Lost ammo: shells (40 -> 38)
+INFO [838685] - 09/08/24 22:31:10 - 0:01:15 - Lost ammo: shells (38 -> 36)
+INFO [838685] - 09/08/24 22:31:11 - 0:01:15 - Lost health (100 -> 97)
+INFO [838685] - 09/08/24 22:31:11 - 0:01:16 - Lost ammo: shells (36 -> 34)
+INFO [838685] - 09/08/24 22:31:12 - 0:01:17 - Lost ammo: shells (34 -> 32)
+WARNING [838685] - 09/08/24 22:31:12 - 0:01:17 - Activated manual control
+INFO [838685] - 09/08/24 22:31:13 - 0:01:17 - Found health (97 -> 98)
+INFO [838685] - 09/08/24 22:31:13 - 0:01:17 - Lost ammo: shells (32 -> 30)
+INFO [838685] - 09/08/24 22:31:14 - 0:01:19 - Lost ammo: shells (30 -> 28)
+WARNING [838685] - 09/08/24 22:31:14 - 0:01:19 - Activated manual control
+INFO [838685] - 09/08/24 22:31:14 - 0:01:19 - Found armor (0 -> 101)
+INFO [838685] - 09/08/24 22:31:15 - 0:01:19 - Lost ammo: shells (28 -> 26)
+INFO [838685] - 09/08/24 22:31:16 - 0:01:20 - Lost ammo: shells (26 -> 24)
+WARNING [838685] - 09/08/24 22:31:16 - 0:01:21 - Activated manual control
+INFO [838685] - 09/08/24 22:31:17 - 0:01:21 - Lost health (98 -> 94)
+INFO [838685] - 09/08/24 22:31:17 - 0:01:21 - Lost armor (101 -> 99)
+INFO [838685] - 09/08/24 22:31:17 - 0:01:22 - Lost ammo: shells (24 -> 22)
+INFO [838685] - 09/08/24 22:31:17 - 0:01:22 - Found health (94 -> 95)
+INFO [838685] - 09/08/24 22:31:18 - 0:01:22 - Lost ammo: shells (22 -> 20)
+INFO [838685] - 09/08/24 22:31:18 - 0:01:23 - Found health (95 -> 96)
+WARNING [838685] - 09/08/24 22:31:18 - 0:01:23 - Activated manual control
+INFO [838685] - 09/08/24 22:31:19 - 0:01:24 - Lost health (96 -> 94)
+INFO [838685] - 09/08/24 22:31:19 - 0:01:24 - Lost armor (99 -> 98)
+INFO [838685] - 09/08/24 22:31:19 - 0:01:24 - Lost ammo: shells (20 -> 18)
+INFO [838685] - 09/08/24 22:31:20 - 0:01:25 - Lost ammo: shells (18 -> 16)
+WARNING [838685] - 09/08/24 22:31:20 - 0:01:25 - Activated manual control
+INFO [838685] - 09/08/24 22:31:21 - 0:01:26 - Lost ammo: shells (16 -> 14)
+INFO [838685] - 09/08/24 22:31:22 - 0:01:27 - Lost ammo: shells (14 -> 12)
+WARNING [838685] - 09/08/24 22:31:22 - 0:01:27 - Activated manual control
+INFO [838685] - 09/08/24 22:31:22 - 0:01:27 - Lost ammo: shells (12 -> 10)
+INFO [838685] - 09/08/24 22:31:23 - 0:01:28 - Lost ammo: shells (10 -> 8)
+INFO [838685] - 09/08/24 22:31:25 - 0:01:29 - Lost ammo: shells (8 -> 6)
+INFO [838685] - 09/08/24 22:31:25 - 0:01:30 - Found ammo: bullets (24 -> 29)
+INFO [838685] - 09/08/24 22:31:25 - 0:01:30 - Found ammo: bullets (29 -> 34)
+INFO [838685] - 09/08/24 22:31:26 - 0:01:31 - Lost ammo: shells (6 -> 4)
+INFO [838685] - 09/08/24 22:31:27 - 0:01:32 - Lost ammo: shells (4 -> 2)
+WARNING [838685] - 09/08/24 22:31:27 - 0:01:32 - Activated manual control
+INFO [838685] - 09/08/24 22:31:28 - 0:01:33 - Lost ammo: shells (2 -> 0)
+INFO [838685] - 09/08/24 22:31:28 - 0:01:33 - Found ammo: rockets (5 -> 10)
+INFO [838685] - 09/08/24 22:31:29 - 0:01:33 - Found ammo: rockets (10 -> 15)
+INFO [838685] - 09/08/24 22:31:29 - 0:01:33 - Switched weapon: SuperShotgun -> Pistol
+INFO [838685] - 09/08/24 22:31:29 - 0:01:33 - Found ammo: rockets (15 -> 25)
+INFO [838685] - 09/08/24 22:31:29 - 0:01:33 - Found ammo: rockets (25 -> 30)
+INFO [838685] - 09/08/24 22:31:29 - 0:01:34 - Lost ammo: bullets (34 -> 33)
+WARNING [838685] - 09/08/24 22:31:29 - 0:01:34 - Activated manual control
+INFO [838685] - 09/08/24 22:31:29 - 0:01:34 - Found ammo: rockets (30 -> 35)
+INFO [838685] - 09/08/24 22:31:29 - 0:01:34 - Lost ammo: bullets (33 -> 32)
+INFO [838685] - 09/08/24 22:31:30 - 0:01:34 - Lost ammo: bullets (32 -> 31)
+INFO [838685] - 09/08/24 22:31:30 - 0:01:35 - Lost health (94 -> 86)
+INFO [838685] - 09/08/24 22:31:30 - 0:01:35 - Lost armor (98 -> 94)
+INFO [838685] - 09/08/24 22:31:30 - 0:01:35 - Lost ammo: bullets (31 -> 30)
+INFO [838685] - 09/08/24 22:31:30 - 0:01:35 - Lost health (86 -> 76)
+INFO [838685] - 09/08/24 22:31:30 - 0:01:35 - Lost armor (94 -> 89)
+INFO [838685] - 09/08/24 22:31:30 - 0:01:35 - Lost ammo: bullets (30 -> 29)
+INFO [838685] - 09/08/24 22:31:31 - 0:01:35 - Lost ammo: bullets (29 -> 28)
+WARNING [838685] - 09/08/24 22:31:31 - 0:01:36 - Activated manual control
+INFO [838685] - 09/08/24 22:31:31 - 0:01:36 - Lost ammo: bullets (28 -> 27)
+INFO [838685] - 09/08/24 22:31:31 - 0:01:36 - Lost ammo: bullets (27 -> 26)
+INFO [838685] - 09/08/24 22:31:32 - 0:01:36 - Lost ammo: bullets (26 -> 25)
+INFO [838685] - 09/08/24 22:31:32 - 0:01:37 - Lost ammo: bullets (25 -> 24)
+INFO [838685] - 09/08/24 22:31:32 - 0:01:37 - Lost ammo: bullets (24 -> 23)
+INFO [838685] - 09/08/24 22:31:32 - 0:01:37 - Found ammo: shells (0 -> 40)
+INFO [838685] - 09/08/24 22:31:33 - 0:01:38 - Switched weapon: Pistol -> SuperShotgun
+INFO [838685] - 09/08/24 22:31:33 - 0:01:38 - Found ammo: shells (40 -> 50)
+INFO [838685] - 09/08/24 22:31:33 - 0:01:38 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:31:33 - 0:01:38 - Found ammo: shells (48 -> 50)
+INFO [838685] - 09/08/24 22:31:34 - 0:01:39 - Kill
+INFO [838685] - 09/08/24 22:31:34 - 0:01:39 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:31:34 - 0:01:39 - Found ammo: shells (48 -> 50)
+WARNING [838685] - 09/08/24 22:31:36 - 0:01:41 - Activated manual control
+INFO [838685] - 09/08/24 22:31:36 - 0:01:41 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:31:37 - 0:01:42 - Lost ammo: shells (48 -> 46)
+INFO [838685] - 09/08/24 22:31:38 - 0:01:43 - Lost ammo: shells (46 -> 44)
+INFO [838685] - 09/08/24 22:31:39 - 0:01:44 - Lost ammo: shells (44 -> 42)
+INFO [838685] - 09/08/24 22:31:39 - 0:01:44 - Lost health (76 -> 70)
+INFO [838685] - 09/08/24 22:31:39 - 0:01:44 - Lost armor (89 -> 86)
+WARNING [838685] - 09/08/24 22:31:40 - 0:01:45 - Activated manual control
+INFO [838685] - 09/08/24 22:31:40 - 0:01:45 - Found armor (86 -> 200)
+INFO [838685] - 09/08/24 22:31:40 - 0:01:45 - Lost ammo: shells (42 -> 40)
+INFO [838685] - 09/08/24 22:31:41 - 0:01:46 - Lost ammo: shells (40 -> 38)
+WARNING [838685] - 09/08/24 22:31:41 - 0:01:46 - Activated manual control
+INFO [838685] - 09/08/24 22:31:42 - 0:01:46 - Lost ammo: shells (38 -> 36)
+INFO [838685] - 09/08/24 22:31:43 - 0:01:47 - Lost ammo: shells (36 -> 34)
+INFO [838685] - 09/08/24 22:31:44 - 0:01:48 - Kill
+INFO [838685] - 09/08/24 22:31:44 - 0:01:48 - Lost ammo: shells (34 -> 32)
+INFO [838685] - 09/08/24 22:31:45 - 0:01:49 - Lost ammo: shells (32 -> 30)
+WARNING [838685] - 09/08/24 22:31:45 - 0:01:50 - Activated manual control
+INFO [838685] - 09/08/24 22:31:46 - 0:01:50 - Lost ammo: shells (30 -> 28)
+INFO [838685] - 09/08/24 22:31:47 - 0:01:52 - Lost ammo: shells (28 -> 26)
+INFO [838685] - 09/08/24 22:31:48 - 0:01:53 - Lost ammo: shells (26 -> 24)
+WARNING [838685] - 09/08/24 22:31:48 - 0:01:53 - Activated manual control
+INFO [838685] - 09/08/24 22:31:49 - 0:01:53 - Lost ammo: shells (24 -> 22)
+INFO [838685] - 09/08/24 22:31:50 - 0:01:54 - Lost ammo: shells (22 -> 20)
+INFO [838685] - 09/08/24 22:31:51 - 0:01:56 - Lost ammo: shells (20 -> 18)
+WARNING [838685] - 09/08/24 22:31:51 - 0:01:56 - Activated manual control
+INFO [838685] - 09/08/24 22:31:52 - 0:01:56 - Found health (70 -> 71)
+INFO [838685] - 09/08/24 22:31:52 - 0:01:56 - Lost ammo: shells (18 -> 16)
+INFO [838685] - 09/08/24 22:31:53 - 0:01:57 - Lost ammo: shells (16 -> 14)
+INFO [838685] - 09/08/24 22:31:54 - 0:01:58 - Lost ammo: shells (14 -> 12)
+INFO [838685] - 09/08/24 22:31:54 - 0:01:59 - Lost ammo: shells (12 -> 10)
+INFO [838685] - 09/08/24 22:31:55 - 0:02:00 - Lost ammo: shells (10 -> 8)
+INFO [838685] - 09/08/24 22:31:56 - 0:02:01 - Lost ammo: shells (8 -> 6)
+INFO [838685] - 09/08/24 22:31:58 - 0:02:03 - Lost ammo: shells (6 -> 4)
+INFO [838685] - 09/08/24 22:31:59 - 0:02:03 - Lost ammo: shells (4 -> 2)
+INFO [838685] - 09/08/24 22:32:00 - 0:02:04 - Lost ammo: shells (2 -> 0)
+INFO [838685] - 09/08/24 22:32:00 - 0:02:05 - Switched weapon: SuperShotgun -> Pistol
+WARNING [838685] - 09/08/24 22:32:00 - 0:02:05 - Activated manual control
+INFO [838685] - 09/08/24 22:32:01 - 0:02:05 - Lost ammo: bullets (23 -> 22)
+INFO [838685] - 09/08/24 22:32:01 - 0:02:06 - Lost ammo: bullets (22 -> 21)
+INFO [838685] - 09/08/24 22:32:01 - 0:02:06 - Lost ammo: bullets (21 -> 20)
+INFO [838685] - 09/08/24 22:32:01 - 0:02:06 - Lost ammo: bullets (20 -> 19)
+INFO [838685] - 09/08/24 22:32:02 - 0:02:07 - Lost ammo: bullets (19 -> 18)
+WARNING [838685] - 09/08/24 22:32:02 - 0:02:07 - Activated manual control
+INFO [838685] - 09/08/24 22:32:02 - 0:02:07 - Lost ammo: bullets (18 -> 17)
+INFO [838685] - 09/08/24 22:32:03 - 0:02:07 - Lost ammo: bullets (17 -> 16)
+INFO [838685] - 09/08/24 22:32:03 - 0:02:08 - Lost ammo: bullets (16 -> 15)
+INFO [838685] - 09/08/24 22:32:03 - 0:02:08 - Lost ammo: bullets (15 -> 14)
+INFO [838685] - 09/08/24 22:32:03 - 0:02:08 - Lost ammo: bullets (14 -> 13)
+INFO [838685] - 09/08/24 22:32:04 - 0:02:08 - Lost ammo: bullets (13 -> 12)
+WARNING [838685] - 09/08/24 22:32:04 - 0:02:09 - Activated manual control
+INFO [838685] - 09/08/24 22:32:04 - 0:02:09 - Lost ammo: bullets (12 -> 11)
+INFO [838685] - 09/08/24 22:32:05 - 0:02:09 - Lost ammo: bullets (11 -> 10)
+INFO [838685] - 09/08/24 22:32:05 - 0:02:10 - Lost ammo: bullets (10 -> 9)
+INFO [838685] - 09/08/24 22:32:05 - 0:02:10 - Lost ammo: bullets (9 -> 8)
+INFO [838685] - 09/08/24 22:32:05 - 0:02:10 - Lost ammo: bullets (8 -> 7)
+INFO [838685] - 09/08/24 22:32:06 - 0:02:11 - Lost ammo: bullets (7 -> 6)
+INFO [838685] - 09/08/24 22:32:06 - 0:02:11 - Lost ammo: bullets (6 -> 5)
+INFO [838685] - 09/08/24 22:32:07 - 0:02:11 - Lost ammo: bullets (5 -> 4)
+INFO [838685] - 09/08/24 22:32:07 - 0:02:11 - Found ammo: bullets (4 -> 9)
+INFO [838685] - 09/08/24 22:32:07 - 0:02:12 - Found ammo: bullets (9 -> 14)
+INFO [838685] - 09/08/24 22:32:07 - 0:02:12 - Lost ammo: bullets (14 -> 13)
+INFO [838685] - 09/08/24 22:32:07 - 0:02:12 - Lost ammo: bullets (13 -> 12)
+WARNING [838685] - 09/08/24 22:32:08 - 0:02:13 - Activated manual control
+INFO [838685] - 09/08/24 22:32:08 - 0:02:13 - Found ammo: bullets (12 -> 16)
+INFO [838685] - 09/08/24 22:32:08 - 0:02:13 - Lost ammo: bullets (16 -> 15)
+INFO [838685] - 09/08/24 22:32:08 - 0:02:13 - Lost ammo: bullets (15 -> 14)
+INFO [838685] - 09/08/24 22:32:09 - 0:02:14 - Lost ammo: bullets (14 -> 13)
+INFO [838685] - 09/08/24 22:32:09 - 0:02:14 - Lost ammo: bullets (13 -> 12)
+INFO [838685] - 09/08/24 22:32:09 - 0:02:14 - Found health (71 -> 72)
+INFO [838685] - 09/08/24 22:32:09 - 0:02:14 - Lost ammo: bullets (12 -> 11)
+INFO [838685] - 09/08/24 22:32:10 - 0:02:14 - Found health (72 -> 73)
+INFO [838685] - 09/08/24 22:32:10 - 0:02:15 - Lost ammo: bullets (11 -> 10)
+INFO [838685] - 09/08/24 22:32:10 - 0:02:15 - Lost ammo: bullets (10 -> 9)
+INFO [838685] - 09/08/24 22:32:10 - 0:02:15 - Lost ammo: bullets (9 -> 8)
+INFO [838685] - 09/08/24 22:32:11 - 0:02:16 - Lost ammo: bullets (8 -> 7)
+INFO [838685] - 09/08/24 22:32:11 - 0:02:16 - Lost ammo: bullets (7 -> 6)
+INFO [838685] - 09/08/24 22:32:11 - 0:02:16 - Lost ammo: bullets (6 -> 5)
+WARNING [838685] - 09/08/24 22:32:12 - 0:02:17 - Activated manual control
+INFO [838685] - 09/08/24 22:32:13 - 0:02:17 - Lost ammo: bullets (5 -> 4)
+INFO [838685] - 09/08/24 22:32:13 - 0:02:18 - Lost ammo: bullets (4 -> 3)
+INFO [838685] - 09/08/24 22:32:13 - 0:02:18 - Lost ammo: bullets (3 -> 2)
+INFO [838685] - 09/08/24 22:32:14 - 0:02:18 - Lost ammo: bullets (2 -> 1)
+INFO [838685] - 09/08/24 22:32:14 - 0:02:19 - Lost ammo: bullets (1 -> 0)
+INFO [838685] - 09/08/24 22:32:14 - 0:02:19 - Switched weapon: Pistol -> Fist
+WARNING [838685] - 09/08/24 22:32:15 - 0:02:19 - Activated manual control
+INFO [838685] - 09/08/24 22:32:15 - 0:02:20 - Found ammo: rockets (35 -> 50)
+WARNING [838685] - 09/08/24 22:32:16 - 0:02:21 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:18 - 0:02:23 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:20 - 0:02:24 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:21 - 0:02:26 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:23 - 0:02:28 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:25 - 0:02:29 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:26 - 0:02:31 - Activated manual control
+INFO [838685] - 09/08/24 22:32:26 - 0:02:31 - Found ammo: bullets (0 -> 5)
+INFO [838685] - 09/08/24 22:32:27 - 0:02:31 - Switched weapon: Fist -> Pistol
+INFO [838685] - 09/08/24 22:32:27 - 0:02:32 - Lost ammo: bullets (5 -> 4)
+INFO [838685] - 09/08/24 22:32:27 - 0:02:32 - Lost ammo: bullets (4 -> 3)
+INFO [838685] - 09/08/24 22:32:28 - 0:02:32 - Lost ammo: bullets (3 -> 2)
+INFO [838685] - 09/08/24 22:32:28 - 0:02:33 - Lost ammo: bullets (2 -> 1)
+INFO [838685] - 09/08/24 22:32:28 - 0:02:33 - Found ammo: shells (0 -> 20)
+WARNING [838685] - 09/08/24 22:32:28 - 0:02:33 - Activated manual control
+INFO [838685] - 09/08/24 22:32:28 - 0:02:33 - Switched weapon: Pistol -> SuperShotgun
+INFO [838685] - 09/08/24 22:32:28 - 0:02:33 - Lost ammo: shells (20 -> 18)
+INFO [838685] - 09/08/24 22:32:29 - 0:02:34 - Lost ammo: shells (18 -> 16)
+INFO [838685] - 09/08/24 22:32:30 - 0:02:35 - Lost ammo: shells (16 -> 14)
+INFO [838685] - 09/08/24 22:32:31 - 0:02:36 - Lost ammo: shells (14 -> 12)
+INFO [838685] - 09/08/24 22:32:32 - 0:02:37 - Lost ammo: shells (12 -> 10)
+INFO [838685] - 09/08/24 22:32:33 - 0:02:38 - Lost ammo: shells (10 -> 8)
+INFO [838685] - 09/08/24 22:32:34 - 0:02:39 - Lost ammo: shells (8 -> 6)
+INFO [838685] - 09/08/24 22:32:35 - 0:02:40 - Lost ammo: shells (6 -> 4)
+WARNING [838685] - 09/08/24 22:32:36 - 0:02:41 - Activated manual control
+INFO [838685] - 09/08/24 22:32:36 - 0:02:41 - Lost ammo: shells (4 -> 2)
+INFO [838685] - 09/08/24 22:32:37 - 0:02:42 - Lost ammo: shells (2 -> 0)
+INFO [838685] - 09/08/24 22:32:37 - 0:02:42 - Switched weapon: SuperShotgun -> Pistol
+INFO [838685] - 09/08/24 22:32:38 - 0:02:43 - Lost ammo: bullets (1 -> 0)
+INFO [838685] - 09/08/24 22:32:38 - 0:02:43 - Switched weapon: Pistol -> Fist
+WARNING [838685] - 09/08/24 22:32:38 - 0:02:43 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:40 - 0:02:45 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:42 - 0:02:47 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:44 - 0:02:49 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:45 - 0:02:50 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:47 - 0:02:52 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:49 - 0:02:54 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:51 - 0:02:56 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:53 - 0:02:57 - Activated manual control
+WARNING [838685] - 09/08/24 22:32:54 - 0:02:59 - Activated manual control
+INFO [838685] - 09/08/24 22:32:55 - 0:03:00 - Found ammo: bullets (0 -> 5)
+INFO [838685] - 09/08/24 22:32:56 - 0:03:01 - Switched weapon: Fist -> Pistol
+WARNING [838685] - 09/08/24 22:32:56 - 0:03:01 - Activated manual control
+INFO [838685] - 09/08/24 22:32:56 - 0:03:01 - Lost ammo: bullets (5 -> 4)
+INFO [838685] - 09/08/24 22:32:57 - 0:03:01 - Lost ammo: bullets (4 -> 3)
+INFO [838685] - 09/08/24 22:32:57 - 0:03:02 - Lost ammo: bullets (3 -> 2)
+INFO [838685] - 09/08/24 22:32:57 - 0:03:02 - Lost ammo: bullets (2 -> 1)
+INFO [838685] - 09/08/24 22:32:57 - 0:03:02 - Lost ammo: bullets (1 -> 0)
+WARNING [838685] - 09/08/24 22:32:58 - 0:03:03 - Activated manual control
+INFO [838685] - 09/08/24 22:32:58 - 0:03:03 - Switched weapon: Pistol -> Fist
+WARNING [838685] - 09/08/24 22:32:59 - 0:03:04 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:01 - 0:03:06 - Activated manual control
+INFO [838685] - 09/08/24 22:33:02 - 0:03:07 - Found ammo: bullets (0 -> 5)
+WARNING [838685] - 09/08/24 22:33:03 - 0:03:08 - Activated manual control
+INFO [838685] - 09/08/24 22:33:03 - 0:03:08 - Switched weapon: Fist -> Pistol
+INFO [838685] - 09/08/24 22:33:03 - 0:03:08 - Lost ammo: bullets (5 -> 4)
+INFO [838685] - 09/08/24 22:33:04 - 0:03:08 - Lost ammo: bullets (4 -> 3)
+INFO [838685] - 09/08/24 22:33:04 - 0:03:09 - Lost ammo: bullets (3 -> 2)
+INFO [838685] - 09/08/24 22:33:04 - 0:03:09 - Lost ammo: bullets (2 -> 1)
+INFO [838685] - 09/08/24 22:33:05 - 0:03:10 - Lost ammo: bullets (1 -> 0)
+INFO [838685] - 09/08/24 22:33:05 - 0:03:10 - Switched weapon: Pistol -> Fist
+WARNING [838685] - 09/08/24 22:33:05 - 0:03:10 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:07 - 0:03:12 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:09 - 0:03:14 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:11 - 0:03:15 - Activated manual control
+INFO [838685] - 09/08/24 22:33:11 - 0:03:16 - Found ammo: bullets (0 -> 5)
+INFO [838685] - 09/08/24 22:33:11 - 0:03:16 - Switched weapon: Fist -> Pistol
+INFO [838685] - 09/08/24 22:33:11 - 0:03:16 - Lost ammo: bullets (5 -> 4)
+INFO [838685] - 09/08/24 22:33:11 - 0:03:16 - Found ammo: shells (0 -> 20)
+INFO [838685] - 09/08/24 22:33:12 - 0:03:16 - Switched weapon: Pistol -> SuperShotgun
+INFO [838685] - 09/08/24 22:33:12 - 0:03:17 - Lost ammo: shells (20 -> 18)
+INFO [838685] - 09/08/24 22:33:13 - 0:03:18 - Lost ammo: shells (18 -> 16)
+INFO [838685] - 09/08/24 22:33:14 - 0:03:19 - Lost ammo: shells (16 -> 14)
+WARNING [838685] - 09/08/24 22:33:14 - 0:03:19 - Activated manual control
+INFO [838685] - 09/08/24 22:33:15 - 0:03:20 - Lost ammo: shells (14 -> 12)
+INFO [838685] - 09/08/24 22:33:16 - 0:03:21 - Lost ammo: shells (12 -> 10)
+INFO [838685] - 09/08/24 22:33:18 - 0:03:23 - Lost ammo: shells (10 -> 8)
+INFO [838685] - 09/08/24 22:33:19 - 0:03:24 - Lost ammo: shells (8 -> 6)
+INFO [838685] - 09/08/24 22:33:20 - 0:03:25 - Lost ammo: shells (6 -> 4)
+INFO [838685] - 09/08/24 22:33:21 - 0:03:26 - Lost ammo: shells (4 -> 2)
+INFO [838685] - 09/08/24 22:33:22 - 0:03:27 - Lost ammo: shells (2 -> 0)
+INFO [838685] - 09/08/24 22:33:23 - 0:03:27 - Switched weapon: SuperShotgun -> Pistol
+WARNING [838685] - 09/08/24 22:33:23 - 0:03:28 - Activated manual control
+INFO [838685] - 09/08/24 22:33:23 - 0:03:28 - Lost ammo: bullets (4 -> 3)
+INFO [838685] - 09/08/24 22:33:23 - 0:03:28 - Lost ammo: bullets (3 -> 2)
+INFO [838685] - 09/08/24 22:33:24 - 0:03:29 - Lost ammo: bullets (2 -> 1)
+INFO [838685] - 09/08/24 22:33:24 - 0:03:29 - Lost ammo: bullets (1 -> 0)
+INFO [838685] - 09/08/24 22:33:25 - 0:03:29 - Switched weapon: Pistol -> Fist
+INFO [838685] - 09/08/24 22:33:25 - 0:03:29 - Found ammo: bullets (0 -> 10)
+WARNING [838685] - 09/08/24 22:33:25 - 0:03:30 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:26 - 0:03:31 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:28 - 0:03:33 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:30 - 0:03:35 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:32 - 0:03:36 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:33 - 0:03:38 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:35 - 0:03:40 - Activated manual control
+INFO [838685] - 09/08/24 22:33:36 - 0:03:41 - Found ammo: bullets (10 -> 15)
+WARNING [838685] - 09/08/24 22:33:37 - 0:03:42 - Activated manual control
+INFO [838685] - 09/08/24 22:33:37 - 0:03:42 - Found ammo: bullets (15 -> 20)
+INFO [838685] - 09/08/24 22:33:38 - 0:03:43 - Found ammo: bullets (20 -> 25)
+WARNING [838685] - 09/08/24 22:33:38 - 0:03:43 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:40 - 0:03:45 - Activated manual control
+INFO [838685] - 09/08/24 22:33:41 - 0:03:46 - Found ammo: bullets (25 -> 30)
+WARNING [838685] - 09/08/24 22:33:42 - 0:03:47 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:44 - 0:03:48 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:45 - 0:03:50 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:47 - 0:03:52 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:49 - 0:03:54 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:50 - 0:03:55 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:52 - 0:03:57 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:54 - 0:03:59 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:56 - 0:04:01 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:58 - 0:04:02 - Activated manual control
+WARNING [838685] - 09/08/24 22:33:59 - 0:04:04 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:01 - 0:04:06 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:03 - 0:04:08 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:05 - 0:04:10 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:07 - 0:04:11 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:08 - 0:04:13 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:10 - 0:04:15 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:13 - 0:04:18 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:15 - 0:04:20 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:17 - 0:04:21 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:18 - 0:04:23 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:20 - 0:04:25 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:22 - 0:04:26 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:23 - 0:04:28 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:25 - 0:04:30 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:27 - 0:04:31 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:28 - 0:04:33 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:30 - 0:04:35 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:32 - 0:04:37 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:33 - 0:04:38 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:35 - 0:04:40 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:37 - 0:04:42 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:39 - 0:04:43 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:40 - 0:04:45 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:42 - 0:04:47 - Activated manual control
+INFO [838685] - 09/08/24 22:34:42 - 0:04:47 - Found health (73 -> 74)
+WARNING [838685] - 09/08/24 22:34:44 - 0:04:48 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:46 - 0:04:51 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:48 - 0:04:52 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:51 - 0:04:55 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:52 - 0:04:57 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:54 - 0:04:59 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:56 - 0:05:00 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:57 - 0:05:02 - Activated manual control
+WARNING [838685] - 09/08/24 22:34:59 - 0:05:04 - Activated manual control
+WARNING [838685] - 09/08/24 22:35:01 - 0:05:06 - Activated manual control
+WARNING [838685] - 09/08/24 22:35:03 - 0:05:07 - Activated manual control
+WARNING [838685] - 09/08/24 22:35:04 - 0:05:09 - Activated manual control
+WARNING [838685] - 09/08/24 22:35:06 - 0:05:11 - Activated manual control
+WARNING [838685] - 09/08/24 22:35:08 - 0:05:13 - Activated manual control
+WARNING [838685] - 09/08/24 22:35:10 - 0:05:15 - Activated manual control
+WARNING [838685] - 09/08/24 22:35:12 - 0:05:16 - Activated manual control
+WARNING [838685] - 09/08/24 22:35:13 - 0:05:18 - Activated manual control
+WARNING [838685] - 09/08/24 22:35:15 - 0:05:20 - Activated manual control
+INFO [838685] - 09/08/24 22:35:15 - 0:05:20 - Switched weapon: Fist -> SuperShotgun
+INFO [838685] - 09/08/24 22:35:15 - 0:05:20 - Found ammo: shells (0 -> 50)
+INFO [838685] - 09/08/24 22:35:16 - 0:05:20 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:35:17 - 0:05:22 - Lost ammo: shells (48 -> 46)
+INFO [838685] - 09/08/24 22:35:18 - 0:05:23 - Lost ammo: shells (46 -> 44)
+INFO [838685] - 09/08/24 22:35:19 - 0:05:23 - Lost ammo: shells (44 -> 42)
+INFO [838685] - 09/08/24 22:35:20 - 0:05:24 - Lost ammo: shells (42 -> 40)
+INFO [838685] - 09/08/24 22:35:21 - 0:05:25 - Lost ammo: shells (40 -> 38)
+INFO [838685] - 09/08/24 22:35:21 - 0:05:26 - Lost ammo: shells (38 -> 36)
+INFO [838685] - 09/08/24 22:35:22 - 0:05:27 - Found ammo: shells (36 -> 50)
+INFO [838685] - 09/08/24 22:35:22 - 0:05:27 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:35:23 - 0:05:28 - Found ammo: shells (48 -> 50)
+INFO [838685] - 09/08/24 22:35:24 - 0:05:28 - Lost ammo: shells (50 -> 48)
+INFO [838685] - 09/08/24 22:35:24 - 0:05:29 - Lost ammo: shells (48 -> 46)
+INFO [838685] - 09/08/24 22:35:26 - 0:05:31 - Lost ammo: shells (46 -> 44)
+INFO [838685] - 09/08/24 22:35:27 - 0:05:32 - Lost ammo: shells (44 -> 42)
+INFO [838685] - 09/08/24 22:35:28 - 0:05:33 - Lost ammo: shells (42 -> 40)
+INFO [838685] - 09/08/24 22:35:30 - 0:05:34 - Lost ammo: shells (40 -> 38)
+WARNING [838685] - 09/08/24 22:35:30 - 0:05:35 - Activated manual control
+INFO [838685] - 09/08/24 22:35:30 - 0:05:35 - Lost ammo: shells (38 -> 36)
+INFO [838685] - 09/08/24 22:35:31 - 0:05:36 - Lost ammo: shells (36 -> 34)
+INFO [838685] - 09/08/24 22:35:32 - 0:05:37 - Lost ammo: shells (34 -> 32)
+INFO [838685] - 09/08/24 22:35:33 - 0:05:38 - Lost ammo: shells (32 -> 30)
+INFO [838685] - 09/08/24 22:35:34 - 0:05:39 - Lost ammo: shells (30 -> 28)
+INFO [838685] - 09/08/24 22:35:35 - 0:05:40 - Lost ammo: shells (28 -> 26)
+INFO [838685] - 09/08/24 22:35:36 - 0:05:41 - Lost ammo: shells (26 -> 24)
+INFO [838685] - 09/08/24 22:35:37 - 0:05:42 - Lost ammo: shells (24 -> 22)
+WARNING [838685] - 09/08/24 22:35:38 - 0:05:43 - Activated manual control
+INFO [838685] - 09/08/24 22:35:39 - 0:05:43 - Lost ammo: shells (22 -> 20)
+INFO [838685] - 09/08/24 22:35:40 - 0:05:44 - Lost ammo: shells (20 -> 18)
+INFO [838685] - 09/08/24 22:35:41 - 0:05:45 - Lost ammo: shells (18 -> 16)
+INFO [838685] - 09/08/24 22:35:42 - 0:05:47 - Lost ammo: shells (16 -> 14)
+INFO [838685] - 09/08/24 22:35:43 - 0:05:48 - Lost ammo: shells (14 -> 12)
+INFO [838685] - 09/08/24 22:35:44 - 0:05:49 - Lost ammo: shells (12 -> 10)
+INFO [838685] - 09/08/24 22:35:45 - 0:05:50 - Lost ammo: shells (10 -> 8)
+INFO [838685] - 09/08/24 22:35:46 - 0:05:51 - Lost ammo: shells (8 -> 6)
+WARNING [838685] - 09/08/24 22:35:47 - 0:05:51 - Activated manual control
+INFO [838685] - 09/08/24 22:35:47 - 0:05:52 - Lost ammo: shells (6 -> 4)
+INFO [838685] - 09/08/24 22:35:48 - 0:05:53 - Lost ammo: shells (4 -> 2)
+INFO [838685] - 09/08/24 22:35:49 - 0:05:54 - Lost ammo: shells (2 -> 0)
+INFO [838685] - 09/08/24 22:35:49 - 0:05:54 - Switched weapon: SuperShotgun -> Pistol
+WARNING [838685] - 09/08/24 22:35:50 - 0:05:55 - Activated manual control
+INFO [838685] - 09/08/24 22:35:50 - 0:05:55 - Found ammo: bullets (30 -> 34)
+INFO [838685] - 09/08/24 22:35:50 - 0:05:55 - Lost ammo: bullets (34 -> 33)
+INFO [838685] - 09/08/24 22:35:50 - 0:05:55 - Lost ammo: bullets (33 -> 32)
+INFO [838685] - 09/08/24 22:35:51 - 0:05:55 - Lost ammo: bullets (32 -> 31)
+INFO [838685] - 09/08/24 22:35:51 - 0:05:56 - Lost ammo: bullets (31 -> 30)
+INFO [838685] - 09/08/24 22:35:51 - 0:05:56 - Lost ammo: bullets (30 -> 29)
+INFO [838685] - 09/08/24 22:35:51 - 0:05:56 - Lost ammo: bullets (29 -> 28)
+INFO [838685] - 09/08/24 22:35:52 - 0:05:56 - Lost ammo: bullets (28 -> 27)
+WARNING [838685] - 09/08/24 22:35:52 - 0:05:57 - Activated manual control
+INFO [838685] - 09/08/24 22:35:52 - 0:05:57 - Lost ammo: bullets (27 -> 26)
+INFO [838685] - 09/08/24 22:35:52 - 0:05:57 - Lost ammo: bullets (26 -> 25)
+INFO [838685] - 09/08/24 22:35:52 - 0:05:57 - Lost ammo: bullets (25 -> 24)
+INFO [838685] - 09/08/24 22:35:53 - 0:05:57 - Lost ammo: bullets (24 -> 23)
+INFO [838685] - 09/08/24 22:35:53 - 0:05:58 - Lost ammo: bullets (23 -> 22)
+INFO [838685] - 09/08/24 22:35:53 - 0:05:58 - Lost ammo: bullets (22 -> 21)
+WARNING [838685] - 09/08/24 22:35:54 - 0:05:58 - Activated manual control
+INFO [838685] - 09/08/24 22:35:54 - 0:05:59 - Lost ammo: bullets (21 -> 20)
+INFO [838685] - 09/08/24 22:35:54 - 0:05:59 - Lost ammo: bullets (20 -> 19)
+INFO [838685] - 09/08/24 22:35:54 - 0:05:59 - Lost ammo: bullets (19 -> 18)
+INFO [838685] - 09/08/24 22:35:55 - 0:05:59 - Lost ammo: bullets (18 -> 17)
+INFO [838685] - 09/08/24 22:35:55 - 0:06:00 - Lost ammo: bullets (17 -> 16)
+INFO [838685] - 09/08/24 22:35:55 - 0:06:00 - Lost ammo: bullets (16 -> 15)
+INFO [838685] - 09/08/24 22:35:55 - 0:06:00 - Lost ammo: bullets (15 -> 14)
+INFO [838685] - 09/08/24 22:35:56 - 0:06:01 - Lost ammo: bullets (14 -> 13)
+INFO [838685] - 09/08/24 22:35:56 - 0:06:01 - Lost ammo: bullets (13 -> 12)
+INFO [838685] - 09/08/24 22:35:57 - 0:06:01 - Lost ammo: bullets (12 -> 11)
+INFO [838685] - 09/08/24 22:35:57 - 0:06:02 - Lost ammo: bullets (11 -> 10)
+INFO [838685] - 09/08/24 22:35:57 - 0:06:02 - Lost ammo: bullets (10 -> 9)
+INFO [838685] - 09/08/24 22:35:58 - 0:06:02 - Lost ammo: bullets (9 -> 8)
+INFO [838685] - 09/08/24 22:35:58 - 0:06:03 - Lost ammo: bullets (8 -> 7)
+INFO [838685] - 09/08/24 22:35:58 - 0:06:03 - Lost ammo: bullets (7 -> 6)
+INFO [838685] - 09/08/24 22:35:59 - 0:06:03 - Lost ammo: bullets (6 -> 5)
+WARNING [838685] - 09/08/24 22:35:59 - 0:06:03 - Activated manual control
+INFO [838685] - 09/08/24 22:35:59 - 0:06:04 - Lost ammo: bullets (5 -> 4)
+INFO [838685] - 09/08/24 22:36:00 - 0:06:04 - Lost ammo: bullets (4 -> 3)
+INFO [838685] - 09/08/24 22:36:00 - 0:06:05 - Lost ammo: bullets (3 -> 2)
+INFO [838685] - 09/08/24 22:36:00 - 0:06:05 - Lost ammo: bullets (2 -> 1)
+INFO [838685] - 09/08/24 22:36:00 - 0:06:05 - Lost ammo: bullets (1 -> 0)
+INFO [838685] - 09/08/24 22:36:01 - 0:06:06 - Switched weapon: Pistol -> Fist
+WARNING [838685] - 09/08/24 22:36:01 - 0:06:06 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:03 - 0:06:07 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:04 - 0:06:09 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:06 - 0:06:11 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:08 - 0:06:13 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:10 - 0:06:14 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:11 - 0:06:16 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:13 - 0:06:18 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:15 - 0:06:20 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:17 - 0:06:21 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:18 - 0:06:23 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:20 - 0:06:25 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:22 - 0:06:27 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:24 - 0:06:29 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:26 - 0:06:30 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:27 - 0:06:32 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:29 - 0:06:34 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:31 - 0:06:36 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:33 - 0:06:38 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:35 - 0:06:40 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:37 - 0:06:41 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:38 - 0:06:43 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:40 - 0:06:45 - Activated manual control
+INFO [838685] - 09/08/24 22:36:41 - 0:06:46 - Found health (74 -> 75)
+WARNING [838685] - 09/08/24 22:36:42 - 0:06:47 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:44 - 0:06:49 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:46 - 0:06:50 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:47 - 0:06:52 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:49 - 0:06:54 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:51 - 0:06:56 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:53 - 0:06:58 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:55 - 0:06:59 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:56 - 0:07:01 - Activated manual control
+WARNING [838685] - 09/08/24 22:36:58 - 0:07:03 - Activated manual control

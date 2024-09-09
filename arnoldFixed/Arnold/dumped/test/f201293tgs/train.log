@@ -1,0 +1,263 @@
+INFO [862218] - 09/09/24 06:39:14 - 0:00:00 - ========== Running DOOM ==========
+INFO [862218] - 09/09/24 06:39:14 - 0:00:00 - Experiment will be saved in: /home/tstillwell/projects/arnoldFixed/Arnold/dumped/test/f201293tgs
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - scenario: self_play
+                                              map_ids_train: [1]
+                                              map_ids_test: [1]
+                                              freedoom: True
+                                              height: 60
+                                              width: 108
+                                              gray: False
+                                              use_screen_buffer: True
+                                              use_depth_buffer: False
+                                              labels_mapping: 
+                                              game_features: target,enemy
+                                              render_hud: False
+                                              render_crosshair: True
+                                              render_weapon: True
+                                              hist_size: 4
+                                              frame_skip: 3
+                                              action_combinations: attack+move_lr;turn_lr;move_fb
+                                              freelook: False
+                                              speed: on
+                                              crouch: off
+                                              manual_control: True
+                                              players_per_game: 1
+                                              player_rank: 0
+                                              dump_path: /home/tstillwell/projects/arnoldFixed/Arnold/dumped/test/f201293tgs
+                                              visualize: True
+                                              evaluate: 1
+                                              human_player: False
+                                              reload: /home/tstillwell/projects/arnoldFixed/Arnold/dumped/default/demobot/best-680000.pth
+                                              dump_freq: 0
+                                              gpu_id: -1
+                                              log_frequency: 100
+                                              network_type: dqn_rnn
+                                              use_bn: False
+                                              batch_size: 32
+                                              replay_memory_size: 1000000
+                                              start_decay: 0
+                                              stop_decay: 1000000
+                                              final_decay: 0.1
+                                              gamma: 0.99
+                                              dueling_network: False
+                                              recurrence: lstm
+                                              n_rec_updates: 1
+                                              n_rec_layers: 1
+                                              remember: True
+                                              clip_delta: 1.0
+                                              variable_dim: [32, 32]
+                                              bucket_size: [10, 1]
+                                              hidden_dim: 512
+                                              update_frequency: 4
+                                              dropout: 0.5
+                                              optimizer: rmsprop,lr=0.0002
+                                              wad: zombie_deathmatch
+                                              n_bots: 2
+                                              reward_values: 
+                                              randomize_textures: False
+                                              init_bots_health: 100
+                                              game_variables: [('health', 101), ('sel_ammo', 301)]
+                                              n_variables: 2
+                                              n_features: 2
+                                              n_fm: 3
+                                              use_continuous: False
+                                              episode_time: None
+                                              eval_freq: 20000
+                                              eval_time: 300
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - 9 available buttons: ['MOVE_FORWARD', 'MOVE_BACKWARD', 'TURN_LEFT', 'TURN_RIGHT', 'MOVE_LEFT', 'MOVE_RIGHT', 'ATTACK', 'SPEED', 'CROUCH']
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - 35 available actions:
+                                              ['MOVE_FORWARD']
+                                              ['MOVE_BACKWARD']
+                                              ['TURN_LEFT']
+                                              ['TURN_LEFT', 'MOVE_FORWARD']
+                                              ['TURN_LEFT', 'MOVE_BACKWARD']
+                                              ['TURN_RIGHT']
+                                              ['TURN_RIGHT', 'MOVE_FORWARD']
+                                              ['TURN_RIGHT', 'MOVE_BACKWARD']
+                                              ['ATTACK']
+                                              ['ATTACK', 'MOVE_FORWARD']
+                                              ['ATTACK', 'MOVE_BACKWARD']
+                                              ['ATTACK', 'TURN_LEFT']
+                                              ['ATTACK', 'TURN_LEFT', 'MOVE_FORWARD']
+                                              ['ATTACK', 'TURN_LEFT', 'MOVE_BACKWARD']
+                                              ['ATTACK', 'TURN_RIGHT']
+                                              ['ATTACK', 'TURN_RIGHT', 'MOVE_FORWARD']
+                                              ['ATTACK', 'TURN_RIGHT', 'MOVE_BACKWARD']
+                                              ['MOVE_LEFT']
+                                              ['MOVE_LEFT', 'MOVE_FORWARD']
+                                              ['MOVE_LEFT', 'MOVE_BACKWARD']
+                                              ['MOVE_LEFT', 'TURN_LEFT']
+                                              ['MOVE_LEFT', 'TURN_LEFT', 'MOVE_FORWARD']
+                                              ['MOVE_LEFT', 'TURN_LEFT', 'MOVE_BACKWARD']
+                                              ['MOVE_LEFT', 'TURN_RIGHT']
+                                              ['MOVE_LEFT', 'TURN_RIGHT', 'MOVE_FORWARD']
+                                              ['MOVE_LEFT', 'TURN_RIGHT', 'MOVE_BACKWARD']
+                                              ['MOVE_RIGHT']
+                                              ['MOVE_RIGHT', 'MOVE_FORWARD']
+                                              ['MOVE_RIGHT', 'MOVE_BACKWARD']
+                                              ['MOVE_RIGHT', 'TURN_LEFT']
+                                              ['MOVE_RIGHT', 'TURN_LEFT', 'MOVE_FORWARD']
+                                              ['MOVE_RIGHT', 'TURN_LEFT', 'MOVE_BACKWARD']
+                                              ['MOVE_RIGHT', 'TURN_RIGHT']
+                                              ['MOVE_RIGHT', 'TURN_RIGHT', 'MOVE_FORWARD']
+                                              ['MOVE_RIGHT', 'TURN_RIGHT', 'MOVE_BACKWARD']
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - Reward values:
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - {'BASE_REWARD': 0.0, 'DISTANCE': 0.0, 'KILL': 5.0, 'DEATH': -5.0, 'SUICIDE': -5.0, 'MEDIKIT': 1.0, 'ARMOR': 1.0, 'INJURED': -1.0, 'WEAPON': 1.0, 'AMMO': 1.0, 'USE_AMMO': -0.2}
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - Input shape: (3, 60, 108)
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - Conv layer output dim : 4608
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - Hidden layer input dim: 4672
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - Reloading model from /home/tstillwell/projects/arnoldFixed/Arnold/dumped/default/demobot/best-680000.pth...
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - Evaluating the model...
+INFO [862240] - 09/09/24 06:39:14 - 0:00:00 - Evaluating on map 1 ...
+INFO [862240] - 09/09/24 06:39:16 - 0:00:02 - Lost ammo: bullets (50 -> 49)
+INFO [862240] - 09/09/24 06:39:17 - 0:00:03 - Lost ammo: bullets (49 -> 48)
+INFO [862240] - 09/09/24 06:39:18 - 0:00:04 - Lost health (100 -> 97)
+INFO [862240] - 09/09/24 06:39:19 - 0:00:04 - Lost ammo: bullets (48 -> 47)
+WARNING [862240] - 09/09/24 06:39:19 - 0:00:05 - Activated manual control
+INFO [862240] - 09/09/24 06:39:19 - 0:00:05 - Kill
+INFO [862240] - 09/09/24 06:39:19 - 0:00:05 - Kill
+INFO [862240] - 09/09/24 06:39:19 - 0:00:05 - Lost health (97 -> 82)
+INFO [862240] - 09/09/24 06:39:19 - 0:00:05 - Found ammo: bullets (47 -> 52)
+INFO [862240] - 09/09/24 06:39:19 - 0:00:05 - Kill
+INFO [862240] - 09/09/24 06:39:20 - 0:00:06 - Kill
+INFO [862240] - 09/09/24 06:39:20 - 0:00:06 - Lost health (82 -> 79)
+INFO [862240] - 09/09/24 06:39:20 - 0:00:06 - Kill
+WARNING [862240] - 09/09/24 06:39:21 - 0:00:07 - Activated manual control
+INFO [862240] - 09/09/24 06:39:21 - 0:00:07 - Kill
+INFO [862240] - 09/09/24 06:39:21 - 0:00:07 - Lost health (79 -> 76)
+INFO [862240] - 09/09/24 06:39:21 - 0:00:07 - Kill
+INFO [862240] - 09/09/24 06:39:21 - 0:00:07 - Lost health (76 -> 70)
+INFO [862240] - 09/09/24 06:39:21 - 0:00:07 - Kill
+INFO [862240] - 09/09/24 06:39:22 - 0:00:07 - Kill
+INFO [862240] - 09/09/24 06:39:22 - 0:00:08 - Lost health (70 -> 58)
+INFO [862240] - 09/09/24 06:39:22 - 0:00:08 - Lost health (58 -> 55)
+INFO [862240] - 09/09/24 06:39:23 - 0:00:08 - Lost health (55 -> 43)
+INFO [862240] - 09/09/24 06:39:23 - 0:00:09 - Lost ammo: bullets (52 -> 51)
+INFO [862240] - 09/09/24 06:39:23 - 0:00:09 - Found ammo: bullets (51 -> 56)
+INFO [862240] - 09/09/24 06:39:23 - 0:00:09 - Lost health (43 -> 28)
+INFO [862240] - 09/09/24 06:39:24 - 0:00:10 - Lost ammo: bullets (56 -> 55)
+INFO [862240] - 09/09/24 06:39:24 - 0:00:10 - Kill
+INFO [862240] - 09/09/24 06:39:24 - 0:00:10 - Lost health (28 -> 22)
+INFO [862240] - 09/09/24 06:39:24 - 0:00:10 - Found ammo: bullets (55 -> 60)
+INFO [862240] - 09/09/24 06:39:24 - 0:00:10 - Kill
+WARNING [862240] - 09/09/24 06:39:24 - 0:00:10 - Activated manual control
+INFO [862240] - 09/09/24 06:39:25 - 0:00:11 - Kill
+INFO [862240] - 09/09/24 06:39:25 - 0:00:11 - Kill
+INFO [862240] - 09/09/24 06:39:25 - 0:00:11 - Kill
+INFO [862240] - 09/09/24 06:39:25 - 0:00:11 - Kill
+INFO [862240] - 09/09/24 06:39:25 - 0:00:11 - Lost health (22 -> 19)
+INFO [862240] - 09/09/24 06:39:25 - 0:00:11 - Kill
+INFO [862240] - 09/09/24 06:39:25 - 0:00:11 - Found ammo: cells (0 -> 100)
+INFO [862240] - 09/09/24 06:39:25 - 0:00:11 - Found ammo: cells (100 -> 200)
+INFO [862240] - 09/09/24 06:39:25 - 0:00:11 - Found ammo: cells (200 -> 300)
+WARNING [862240] - 09/09/24 06:39:26 - 0:00:12 - Activated manual control
+INFO [862240] - 09/09/24 06:39:27 - 0:00:12 - Lost health (19 -> 7)
+INFO [862240] - 09/09/24 06:39:27 - 0:00:13 - Found ammo: rockets (0 -> 10)
+INFO [862240] - 09/09/24 06:39:27 - 0:00:13 - Found ammo: rockets (10 -> 15)
+INFO [862240] - 09/09/24 06:39:28 - 0:00:14 - Lost health (7 -> 1)
+INFO [862240] - 09/09/24 06:39:28 - 0:00:14 - Found ammo: rockets (15 -> 20)
+INFO [862240] - 09/09/24 06:39:28 - 0:00:14 - Found ammo: rockets (20 -> 25)
+INFO [862240] - 09/09/24 06:39:28 - 0:00:14 - Found ammo: rockets (25 -> 30)
+INFO [862240] - 09/09/24 06:39:28 - 0:00:14 - Found ammo: rockets (30 -> 35)
+INFO [862240] - 09/09/24 06:39:28 - 0:00:14 - Found ammo: rockets (35 -> 40)
+INFO [862240] - 09/09/24 06:39:29 - 0:00:15 - Kill
+INFO [862240] - 09/09/24 06:39:29 - 0:00:15 - Dead
+INFO [862240] - 09/09/24 06:39:29 - 0:00:15 - Lost health (1 -> -11)
+INFO [862240] - 09/09/24 06:39:30 - 0:00:16 - Respawn player
+WARNING [862240] - 09/09/24 06:39:30 - 0:00:16 - Activated manual control
+INFO [862240] - 09/09/24 06:39:31 - 0:00:17 - Kill
+INFO [862240] - 09/09/24 06:39:31 - 0:00:17 - Found ammo: bullets (60 -> 65)
+INFO [862240] - 09/09/24 06:39:32 - 0:00:17 - Found ammo: bullets (65 -> 70)
+INFO [862240] - 09/09/24 06:39:32 - 0:00:18 - Found ammo: bullets (70 -> 74)
+INFO [862240] - 09/09/24 06:39:32 - 0:00:18 - Lost ammo: bullets (74 -> 73)
+INFO [862240] - 09/09/24 06:39:32 - 0:00:18 - Kill
+WARNING [862240] - 09/09/24 06:39:32 - 0:00:18 - Activated manual control
+INFO [862240] - 09/09/24 06:39:33 - 0:00:19 - Lost ammo: bullets (73 -> 72)
+INFO [862240] - 09/09/24 06:39:33 - 0:00:19 - Lost ammo: bullets (72 -> 71)
+INFO [862240] - 09/09/24 06:39:34 - 0:00:19 - Kill
+WARNING [862240] - 09/09/24 06:39:34 - 0:00:20 - Activated manual control
+INFO [862240] - 09/09/24 06:39:35 - 0:00:21 - Lost ammo: bullets (71 -> 70)
+WARNING [862240] - 09/09/24 06:39:36 - 0:00:22 - Activated manual control
+INFO [862240] - 09/09/24 06:39:37 - 0:00:23 - Found armor (0 -> 1)
+INFO [862240] - 09/09/24 06:39:37 - 0:00:23 - Found armor (1 -> 200)
+INFO [862240] - 09/09/24 06:39:37 - 0:00:23 - Lost ammo: bullets (70 -> 69)
+INFO [862240] - 09/09/24 06:39:39 - 0:00:25 - Lost ammo: bullets (69 -> 68)
+INFO [862240] - 09/09/24 06:39:42 - 0:00:28 - Found health (100 -> 101)
+INFO [862240] - 09/09/24 06:39:43 - 0:00:29 - Lost ammo: bullets (68 -> 67)
+INFO [862240] - 09/09/24 06:39:44 - 0:00:30 - Lost health (101 -> 99)
+INFO [862240] - 09/09/24 06:39:44 - 0:00:30 - Lost armor (200 -> 199)
+INFO [862240] - 09/09/24 06:39:44 - 0:00:30 - Kill
+INFO [862240] - 09/09/24 06:39:44 - 0:00:30 - Lost ammo: bullets (67 -> 66)
+INFO [862240] - 09/09/24 06:39:45 - 0:00:30 - Found ammo: bullets (66 -> 71)
+INFO [862240] - 09/09/24 06:39:45 - 0:00:31 - Lost health (99 -> 96)
+INFO [862240] - 09/09/24 06:39:45 - 0:00:31 - Lost armor (199 -> 196)
+INFO [862240] - 09/09/24 06:39:46 - 0:00:31 - Lost health (96 -> 90)
+INFO [862240] - 09/09/24 06:39:46 - 0:00:31 - Lost armor (196 -> 190)
+INFO [862240] - 09/09/24 06:39:46 - 0:00:32 - Lost ammo: bullets (71 -> 70)
+INFO [862240] - 09/09/24 06:39:47 - 0:00:32 - Found health (90 -> 91)
+INFO [862240] - 09/09/24 06:39:47 - 0:00:33 - Lost health (91 -> 86)
+INFO [862240] - 09/09/24 06:39:47 - 0:00:33 - Lost armor (190 -> 186)
+INFO [862240] - 09/09/24 06:39:47 - 0:00:33 - Lost ammo: bullets (70 -> 69)
+INFO [862240] - 09/09/24 06:39:48 - 0:00:34 - Lost health (86 -> 83)
+INFO [862240] - 09/09/24 06:39:48 - 0:00:34 - Lost armor (186 -> 183)
+INFO [862240] - 09/09/24 06:39:48 - 0:00:34 - Kill
+INFO [862240] - 09/09/24 06:39:48 - 0:00:34 - Found ammo: bullets (69 -> 74)
+INFO [862240] - 09/09/24 06:39:50 - 0:00:36 - Lost health (83 -> 78)
+INFO [862240] - 09/09/24 06:39:50 - 0:00:36 - Lost armor (183 -> 179)
+INFO [862240] - 09/09/24 06:39:50 - 0:00:36 - Lost ammo: bullets (74 -> 73)
+INFO [862240] - 09/09/24 06:39:51 - 0:00:37 - Lost ammo: bullets (73 -> 72)
+INFO [862240] - 09/09/24 06:39:52 - 0:00:37 - Kill
+INFO [862240] - 09/09/24 06:39:52 - 0:00:37 - Lost ammo: bullets (72 -> 71)
+INFO [862240] - 09/09/24 06:39:53 - 0:00:39 - Lost health (78 -> 75)
+INFO [862240] - 09/09/24 06:39:53 - 0:00:39 - Lost armor (179 -> 176)
+INFO [862240] - 09/09/24 06:39:54 - 0:00:40 - Found ammo: bullets (71 -> 76)
+WARNING [862240] - 09/09/24 06:39:55 - 0:00:41 - Activated manual control
+INFO [862240] - 09/09/24 06:39:56 - 0:00:42 - Lost ammo: bullets (76 -> 75)
+INFO [862240] - 09/09/24 06:39:57 - 0:00:43 - Lost ammo: bullets (75 -> 74)
+INFO [862240] - 09/09/24 06:39:58 - 0:00:44 - Lost health (75 -> 73)
+INFO [862240] - 09/09/24 06:39:58 - 0:00:44 - Lost armor (176 -> 175)
+INFO [862240] - 09/09/24 06:39:59 - 0:00:45 - Lost health (73 -> 68)
+INFO [862240] - 09/09/24 06:39:59 - 0:00:45 - Lost armor (175 -> 171)
+WARNING [862240] - 09/09/24 06:40:00 - 0:00:46 - Activated manual control
+INFO [862240] - 09/09/24 06:40:00 - 0:00:46 - Lost ammo: bullets (74 -> 73)
+WARNING [862240] - 09/09/24 06:40:02 - 0:00:47 - Activated manual control
+INFO [862240] - 09/09/24 06:40:04 - 0:00:50 - Lost health (68 -> 66)
+INFO [862240] - 09/09/24 06:40:04 - 0:00:50 - Lost armor (171 -> 170)
+WARNING [862240] - 09/09/24 06:40:04 - 0:00:50 - Activated manual control
+INFO [862240] - 09/09/24 06:40:05 - 0:00:51 - Lost health (66 -> 61)
+INFO [862240] - 09/09/24 06:40:05 - 0:00:51 - Lost armor (170 -> 166)
+WARNING [862240] - 09/09/24 06:40:06 - 0:00:52 - Activated manual control
+INFO [862240] - 09/09/24 06:40:07 - 0:00:52 - Lost health (61 -> 53)
+INFO [862240] - 09/09/24 06:40:07 - 0:00:52 - Lost armor (166 -> 159)
+INFO [862240] - 09/09/24 06:40:07 - 0:00:53 - Lost ammo: bullets (73 -> 72)
+INFO [862240] - 09/09/24 06:40:08 - 0:00:54 - Lost health (53 -> 51)
+INFO [862240] - 09/09/24 06:40:08 - 0:00:54 - Lost armor (159 -> 158)
+INFO [862240] - 09/09/24 06:40:10 - 0:00:55 - Lost ammo: bullets (72 -> 71)
+INFO [862240] - 09/09/24 06:40:10 - 0:00:56 - Lost ammo: bullets (71 -> 70)
+INFO [862240] - 09/09/24 06:40:10 - 0:00:56 - Found health (51 -> 52)
+INFO [862240] - 09/09/24 06:40:11 - 0:00:57 - Found health (52 -> 53)
+WARNING [862240] - 09/09/24 06:40:13 - 0:00:59 - Activated manual control
+INFO [862240] - 09/09/24 06:40:14 - 0:01:00 - Lost ammo: bullets (70 -> 69)
+INFO [862240] - 09/09/24 06:40:16 - 0:01:02 - Lost ammo: bullets (69 -> 68)
+INFO [862240] - 09/09/24 06:40:17 - 0:01:03 - Lost health (53 -> 50)
+INFO [862240] - 09/09/24 06:40:17 - 0:01:03 - Lost armor (158 -> 155)
+INFO [862240] - 09/09/24 06:40:18 - 0:01:04 - Lost ammo: bullets (68 -> 67)
+INFO [862240] - 09/09/24 06:40:18 - 0:01:04 - Lost health (50 -> 44)
+INFO [862240] - 09/09/24 06:40:18 - 0:01:04 - Lost armor (155 -> 149)
+INFO [862240] - 09/09/24 06:40:21 - 0:01:07 - Lost health (44 -> 38)
+INFO [862240] - 09/09/24 06:40:21 - 0:01:07 - Lost armor (149 -> 143)
+INFO [862240] - 09/09/24 06:40:22 - 0:01:08 - Lost ammo: bullets (67 -> 66)
+INFO [862240] - 09/09/24 06:40:23 - 0:01:09 - Lost health (38 -> 33)
+INFO [862240] - 09/09/24 06:40:23 - 0:01:09 - Lost armor (143 -> 139)
+INFO [862240] - 09/09/24 06:40:27 - 0:01:13 - Lost health (33 -> 31)
+INFO [862240] - 09/09/24 06:40:27 - 0:01:13 - Lost armor (139 -> 138)
+INFO [862240] - 09/09/24 06:40:30 - 0:01:16 - Lost health (31 -> 23)
+INFO [862240] - 09/09/24 06:40:30 - 0:01:16 - Lost armor (138 -> 131)
+INFO [862240] - 09/09/24 06:40:32 - 0:01:18 - Lost health (23 -> 21)
+INFO [862240] - 09/09/24 06:40:32 - 0:01:18 - Lost armor (131 -> 130)
+INFO [862240] - 09/09/24 06:40:32 - 0:01:18 - Lost health (21 -> 18)
+INFO [862240] - 09/09/24 06:40:32 - 0:01:18 - Lost armor (130 -> 127)
+INFO [862240] - 09/09/24 06:40:33 - 0:01:19 - Lost health (18 -> 15)
+INFO [862240] - 09/09/24 06:40:33 - 0:01:19 - Lost armor (127 -> 124)
+INFO [862240] - 09/09/24 06:40:35 - 0:01:21 - Lost health (15 -> 12)
+INFO [862240] - 09/09/24 06:40:35 - 0:01:21 - Lost armor (124 -> 121)
